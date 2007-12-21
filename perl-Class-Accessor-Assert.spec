@@ -17,6 +17,7 @@ Buildrequires:  perl-devel
 BuildRequires:	perl(Class::Accessor)
 BuildRequires:	perl(Class::Data::Inheritable)
 BuildArch:	    noarch
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
 This is a version of Class::Accessor which offers rudimentary
