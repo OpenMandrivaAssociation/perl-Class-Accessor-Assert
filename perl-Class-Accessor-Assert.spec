@@ -1,15 +1,13 @@
 %define upstream_name    Class-Accessor-Assert
-%define upstream_version 1.41
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.41
+Release:	7
 
 Summary:	Accessors which type-check
 License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		https://metacpan.org/dist/Class-Accessor-Assert
-Source0:	https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Class-Accessor-Assert-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SM/SMUELLER/Class-Accessor-Assert-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ type-checking and existence-checking of arguments to constructors and
 set accessors.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 chmod 644 README Changes
 
 %build
@@ -53,9 +51,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 1.400.0-1mdv2010.0
 + Revision: 402133
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 1.40-4mdv2009.0
+- rebuild using %1.41 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 1.40-4mdv2009.0
 + Revision: 255840
 - rebuild
 
